@@ -9,7 +9,8 @@ This is a community node for [n8n](https://n8n.io/) that integrates with the [Gi
 [Credentials](#credentials)  
 [Compatibility](#compatibility)  
 [Resources](#resources)  
-[Version history](#version-history)
+[Version history](#version-history)  
+[Security](#security)
 
 ## Installation
 
@@ -57,6 +58,10 @@ This node has been tested with n8n version 0.214.0 and Gigstack API v1.
 
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 - [Gigstack API documentation](https://docs.gigstack.com)
+
+## Security
+
+> **Note**: This package has some vulnerabilities in its development dependencies. These vulnerabilities are only present during development and do not affect the published package that users install. The production dependencies are kept up-to-date and secure.
 
 ## Version history
 
