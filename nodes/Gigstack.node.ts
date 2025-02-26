@@ -59,19 +59,13 @@ export class Gigstack implements INodeType {
         },
         options: [
           {
-            name: "Create",
-            value: "create",
-            description: "Create a new payment",
-            action: "Create a payment",
-          },
-          {
             name: "Get",
             value: "get",
             description: "Get payment details",
             action: "Get a payment",
           },
           {
-            name: "Register",
+            name: "Register or request",
             value: "register",
             description: "Register a new payment",
             action: "Register a payment",
