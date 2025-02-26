@@ -1,0 +1,12 @@
+{
+    "name": "@disruptive-learning/n8n-nodes-gigstack",
+    "displayName": "Gigstack",
+    "description": "n8n node for Gigstack API integration to manage payments and invoices",
+    "author": "Gigstack",
+    "repository": "https://github.com/disruptive-learning/gigstack_n8n",
+    "npmPackageName": "@disruptive-learning/n8n-nodes-gigstack",
+    "nodes": [
+        "Gigstack"
+    ],
+    "icon": "file:gigstack.svg"
+}
