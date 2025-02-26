@@ -7,7 +7,8 @@ import {
 export class GigstackApi implements ICredentialType {
   name = "gigstackApi";
   displayName = "Gigstack API";
-  documentationUrl = "https://docs.gigstack.com";
+  documentationUrl =
+    "https://github.com/disruptive-learning/gigstack_n8n/blob/main/README.md#credentials";
   properties: INodeProperties[] = [
     {
       displayName: "API Key",

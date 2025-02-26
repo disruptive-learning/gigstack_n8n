@@ -1,21 +1,24 @@
 {
     "name": "n8n-nodes-gigstack",
     "version": "1.1.0",
-    "description": "n8n node for Gigstack API integration",
+    "description": "n8n node for Gigstack API integration to manage payments and invoices",
     "keywords": [
         "n8n-community-node-package",
-        "n8n-node-gigstack",
-        "gigstack"
+        "gigstack",
+        "payment",
+        "invoice",
+        "fintech"
     ],
     "license": "MIT",
-    "homepage": "https://gigstack.com",
+    "homepage": "https://github.com/disruptive-learning/gigstack_n8n",
     "author": {
-        "name": "Your Name",
-        "email": "your@email.com"
+        "name": "Gigstack",
+        "email": "support@gigstack.com",
+        "url": "https://gigstack.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/yourusername/n8n-nodes-gigstack.git"
+        "url": "https://github.com/disruptive-learning/gigstack_n8n.git"
     },
     "main": "index.js",
     "scripts": {
