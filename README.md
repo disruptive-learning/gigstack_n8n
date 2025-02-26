@@ -1,4 +1,4 @@
-# n8n-nodes-gigstack
+# @disruptive-learning/n8n-nodes-gigstack
 
 This is a community node for [n8n](https://n8n.io/) that integrates with the [Gigstack API](https://gigstack.com). It allows you to create and manage payments and invoices directly from your n8n workflows.
 
@@ -20,7 +20,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 1. Open your n8n instance
 2. Go to **Settings** > **Community Nodes**
 3. Select **Install**
-4. Enter `n8n-nodes-gigstack` in **Enter npm package name**
+4. Enter `@disruptive-learning/n8n-nodes-gigstack` in **Enter npm package name**
 5. Agree to the risks of using community nodes: select **I understand the risks of installing unverified code from a third party**
 6. Select **Install**
 
