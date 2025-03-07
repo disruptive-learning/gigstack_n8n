@@ -1,6 +1,6 @@
 {
     "name": "@disruptive-learning/n8n-nodes-gigstack",
-    "version": "1.1.0",
+    "version": "1.0.3",
     "description": "n8n node for Gigstack API integration to manage payments and invoices",
     "keywords": [
         "n8n-community-node-package",

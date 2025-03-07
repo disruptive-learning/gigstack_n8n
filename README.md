@@ -65,6 +65,10 @@ This node has been tested with n8n version 0.214.0 and Gigstack API v1.
 
 ## Version history
 
+### 1.1.1
+
+- [Add description of changes in this version]
+
 ### 1.1.0
 
 - Added Invoice resource with Create operation

@@ -147,7 +147,7 @@ export class Gigstack implements INodeType {
         displayName: "Payment Method",
         name: "paymentMethod",
         type: "options",
-        noDataExpression: true,
+        noDataExpression: false,
         required: true,
         displayOptions: {
           show: {
