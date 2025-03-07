@@ -146,8 +146,7 @@ export class Gigstack implements INodeType {
       {
         displayName: "Payment Method",
         name: "paymentMethod",
-        type: "options",
-        noDataExpression: false,
+        type: "string",
         required: true,
         displayOptions: {
           show: {
@@ -155,98 +154,9 @@ export class Gigstack implements INodeType {
             resource: ["payment"],
           },
         },
-        options: [
-          {
-            name: "Efectivo (01)",
-            value: "01",
-          },
-          {
-            name: "Cheque nominativo (02)",
-            value: "02",
-          },
-          {
-            name: "Transferencia electrónica de fondos (03)",
-            value: "03",
-          },
-          {
-            name: "Tarjeta de crédito (04)",
-            value: "04",
-          },
-          {
-            name: "Monedero electrónico (05)",
-            value: "05",
-          },
-          {
-            name: "Dinero electrónico (06)",
-            value: "06",
-          },
-          {
-            name: "Vales de despensa (08)",
-            value: "08",
-          },
-          {
-            name: "Dación en pago (12)",
-            value: "12",
-          },
-          {
-            name: "Pago por subrogación (13)",
-            value: "13",
-          },
-          {
-            name: "Pago por consignación (14)",
-            value: "14",
-          },
-          {
-            name: "Condonación (15)",
-            value: "15",
-          },
-          {
-            name: "Compensación (17)",
-            value: "17",
-          },
-          {
-            name: "Novación (23)",
-            value: "23",
-          },
-          {
-            name: "Confusión (24)",
-            value: "24",
-          },
-          {
-            name: "Remisión de deuda (25)",
-            value: "25",
-          },
-          {
-            name: "Prescripción o caducidad (26)",
-            value: "26",
-          },
-          {
-            name: "A satisfacción del acreedor (27)",
-            value: "27",
-          },
-          {
-            name: "Tarjeta de débito (28)",
-            value: "28",
-          },
-          {
-            name: "Tarjeta de servicios (29)",
-            value: "29",
-          },
-          {
-            name: "Aplicación de anticipos (30)",
-            value: "30",
-          },
-          {
-            name: "Intermediario pagos (31)",
-            value: "31",
-          },
-          {
-            name: "Por definir (99)",
-            value: "99",
-          },
-        ],
         default: "01",
-        description: "Payment method code",
+        description:
+          "Payment method code (e.g., 01 for cash, 03 for electronic transfer, etc.)",
       },
       {
         displayName: "Automate Invoice On Complete",

@@ -65,6 +65,10 @@ This node has been tested with n8n version 0.214.0 and Gigstack API v1.
 
 ## Version history
 
+### 1.0.4
+
+- Changed Payment Method field from dropdown to string input for direct value entry
+
 ### 1.0.3
 
 - Enhanced Payment Method field to accept expressions, allowing dynamic values to be used
