@@ -243,4 +243,55 @@ describe("Gigstack Node Workflow", () => {
       );
     });
   });
+
+  describe("Register Payment Operation", () => {
+    beforeEach(() => {
+      (executeFunctions.getNodeParameter as jest.Mock).mockImplementation(
+        (param: string, index: number, defaultValue: any) => {
+          if (param === "resource") return "payment";
+          if (param === "operation") return "register";
+          if (param === "paymentMethod") return "03"; // Using a different payment method to test string input
+          if (param === "automateInvoiceOnComplete") return true;
+          if (param === "amount") return 100;
+          if (param === "currency") return "MXN";
+          if (param === "concept") return "Test payment";
+          if (param === "reference") return "REF123";
+          if (param === "dueDate") return "2023-12-31";
+          if (param === "customerEmail") return "test@example.com";
+          if (param === "customerName") return "Test Customer";
+          if (param === "customerTaxId") return "XAXX010101000";
+          if (param === "customerAddress") return "Test Address";
+          if (param === "customerCity") return "Test City";
+          if (param === "customerState") return "Test State";
+          if (param === "customerZipCode") return "12345";
+          if (param === "customerCountry") return "MX";
+          if (param === "paid") return true;
+          if (param === "clientId") return "client123";
+          if (param === "email") return "test@example.com";
+          if (param === "items.itemsValues") return defaultValue; // Return the default value (empty array)
+          return undefined;
+        }
+      );
+
+      (executeFunctions.getCredentials as jest.Mock).mockResolvedValue({
+        apiKey: "test-api-key",
+        environment: "sandbox",
+      });
+
+      (executeFunctions.helpers.request as jest.Mock).mockResolvedValue({
+        id: "pay_123",
+        status: "pending",
+      });
+    });
+
+    it("should register a payment with string payment method", async () => {
+      await gigstackNode.execute.call(executeFunctions);
+
+      const lastCall = (executeFunctions.helpers.request as jest.Mock).mock
+        .calls[0][0];
+      expect(lastCall.method).toBe("POST");
+      expect(lastCall.url).toContain("/payments");
+      expect(lastCall.body.paymentMethod).toBe("03"); // Check that the string value is passed correctly
+    });
+  });
 });

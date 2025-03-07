@@ -28,6 +28,15 @@ describe("Gigstack Node", () => {
       expect(gigstackNode.description.version).toBe(2);
     });
 
+    it("should have paymentMethod as string type", () => {
+      const properties = gigstackNode.description.properties;
+      const paymentMethodField = properties.find(
+        (prop) => prop.name === "paymentMethod"
+      );
+      expect(paymentMethodField).toBeDefined();
+      expect(paymentMethodField?.type).toBe("string");
+    });
+
     it("should have the correct subtitle", () => {
       expect(gigstackNode.description.subtitle).toBe(
         '={{$parameter["operation"] + ": " + $parameter["resource"]}}'
